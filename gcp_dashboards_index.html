@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCP Dashboards - Centro de Control</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .dashboards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .dashboard-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+        }
+
+        .dashboard-card .icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .dashboard-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .dashboard-card .features {
+            list-style: none;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .dashboard-card .features li {
+            padding: 8px 0;
+            color: #555;
+        }
+
+        .dashboard-card .features li:before {
+            content: "✓ ";
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #764ba2;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 GCP Dashboards</h1>
+            <p>Centro de Control de Análisis y Costos</p>
+        </div>
+
+        <div class="dashboards-grid">
+            <a href="gcp_dashboard_complete_20251216_175216.html" class="dashboard-card">
+                <div class="icon">📊</div>
+                <h2>Dashboard Completo</h2>
+                <p>Análisis integral que combina evolución histórica con información detallada del estado actual del proyecto.</p>
+                <ul class="features">
+                    <li>Evolución histórica (1m, 3m, 6m, 1 año)</li>
+                    <li>Tendencias de costos, almacenamiento e instancias</li>
+                    <li>Costos desglosados por servicio</li>
+                    <li>Tabla completa de tipos de máquina con % utilización</li>
+                    <li>Lista detallada de todos los buckets con costos</li>
+                    <li>Tipos de disco y distribución por región</li>
+                    <li>Gráficos interactivos y comparativas temporales</li>
+                </ul>
+                <div class="btn">Ver Dashboard Completo →</div>
+            </a>
+
+            <a href="gcp_dashboard_20251216_174454.html" class="dashboard-card" style="opacity: 0.7;">
+                <div class="icon">📈</div>
+                <h2>Dashboard Detallado (Anterior)</h2>
+                <p>Solo información detallada del estado actual (sin datos históricos).</p>
+                <ul class="features">
+                    <li>Costos desglosados por servicio</li>
+                    <li>Tabla completa de tipos de máquina</li>
+                    <li>Lista detallada de todos los buckets</li>
+                    <li>Tipos de disco y distribución</li>
+                    <li>Información por región</li>
+                </ul>
+                <div class="btn">Ver Versión Anterior →</div>
+            </a>
+
+            <a href="gcp_dashboard_historical_20251216_173942.html" class="dashboard-card" style="opacity: 0.7;">
+                <div class="icon">⏱️</div>
+                <h2>Dashboard Histórico (Anterior)</h2>
+                <p>Solo análisis de tendencias temporales (sin datos detallados actuales).</p>
+                <ul class="features">
+                    <li>Evolución de costos (1m, 3m, 6m, 1año)</li>
+                    <li>Tendencia de almacenamiento</li>
+                    <li>Evolución de número de instancias</li>
+                    <li>Gráficos interactivos por período</li>
+                </ul>
+                <div class="btn">Ver Versión Anterior →</div>
+            </a>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; color: white;">
+            <p style="opacity: 0.8;">Última actualización: 2025-12-16 17:52</p>
+            <p style="opacity: 0.6; margin-top: 10px; font-size: 0.9em;">
+                Para regenerar el dashboard completo ejecuta:<br>
+                <code style="background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 5px; display: inline-block; margin-top: 5px;">
+                    python generate_gcp_dashboard_combined.py
+                </code>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

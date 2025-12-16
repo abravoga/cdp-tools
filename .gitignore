@@ -1,6 +1,10 @@
 # Archivos de configuración con credenciales
 config.py
+confluence_config.py
+jira_config.py
+gcp_config.py
 credentials.json
+*.json
 .env
 
 # Python
