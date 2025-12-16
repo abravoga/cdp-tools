@@ -1,0 +1,2 @@
+{"attributes":{"title":"cdp-consumption-records-*","timeFieldName":"@timestamp"},"id":"cdp-records-dataview","type":"index-pattern","references":[],"migrationVersion":{"index-pattern":"7.11.0"}}
+{"attributes":{"title":"cdp-consumption-summary-*","timeFieldName":"@timestamp"},"id":"cdp-summary-dataview","type":"index-pattern","references":[],"migrationVersion":{"index-pattern":"7.11.0"}}

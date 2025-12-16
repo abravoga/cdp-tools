@@ -1,0 +1,18 @@
+# Elasticsearch
+elasticsearch>=8.0.0
+
+# Data processing
+pandas>=1.3.0
+numpy>=1.20.0
+
+# HTTP requests
+requests>=2.25.0
+urllib3>=1.26.0
+
+# Machine Learning (opcional - para mejores predicciones)
+# Descomentar la siguiente línea si quieres usar Prophet
+# prophet>=1.1.0
+
+# CDP CLI
+# Nota: CDP CLI debe instalarse por separado
+# Ver: https://docs.cloudera.com/cdp-public-cloud/cloud/cli/topics/mc-installing-cdp-client.html
